@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "Hide yandex banners",
+	"version": "0.1",
+	"icons": {
+		"16": "16x16.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"browser_action": {
+		"default_title": "Hide Yandex banners by sending annoying",
+		"default_icon": "16x16.png",
+		"default_popup" : "popup.html"
+	},
+	"content_scripts": [
+    {
+      "matches": [ "https://*/*", "http://*/*" ],
+	  "js": [ "jquery.js", "background.js" ],
+	  "run_at": "document_end"
+    }
+	]
+}
