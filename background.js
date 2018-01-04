@@ -21,6 +21,10 @@ function doact(){
 	
 		loginTimer = window.setTimeout(doact, 1000);
 	}
+	var zendiv = document.getElementsByClassName('infinity-zen');
+	for (var i = 0; i != zendiv.length; ++i) {
+		zendiv[i].style.visibility = "hidden";
+	}
 	
 }
 
